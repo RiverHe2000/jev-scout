@@ -1,0 +1,653 @@
+{
+  "schema_version": "1.0",
+  "provenance": {
+    "label_source": "unreviewed",
+    "annotator": "",
+    "instructions": "Fill grade 0=irrelevant, 1=partly useful, 2=directly useful, using the frozen profile question and available abstract. Leave unknown grades null. Declare author_reference for project-author judgements or independent_human only for actual independent annotation. Never score by looking at model rankings.",
+    "created_at": "2026-09-25T04:56:44.831457+00:00",
+    "independent_review": false
+  },
+  "profiles": [
+    {
+      "fixture_key": "agent-memory",
+      "question": "Which papers help me build LLM agents that retain useful information across long conversations and reliably retrieve it later? Prioritize evaluations that reveal memory failures, position sensitivity, or multi-session behavior.",
+      "preferences": [
+        {
+          "id": "memory-evaluation",
+          "label": "Memory evaluation",
+          "question": "Does the abstract explicitly describe an evaluation of memory or long-context behavior?",
+          "weight": 1.5
+        },
+        {
+          "id": "failure-analysis",
+          "label": "Failure analysis",
+          "question": "Does the abstract explicitly describe a failure mode, limitation, or robustness test?",
+          "weight": 1.0
+        },
+        {
+          "id": "agent-system",
+          "label": "Agent system",
+          "question": "Does the abstract describe an implemented agent or memory system?",
+          "weight": 1.0
+        }
+      ],
+      "exclusions": "",
+      "keywords": [
+        "memory",
+        "context",
+        "long",
+        "agents",
+        "conversations",
+        "retrieval"
+      ]
+    },
+    {
+      "fixture_key": "efficient-inference",
+      "question": "Which papers can help me reduce the memory and compute cost of running or adapting large language models? I want practical mechanisms with measured efficiency tradeoffs, especially inference serving, attention, quantization, and parameter-efficient adaptation.",
+      "preferences": [
+        {
+          "id": "efficiency-measured",
+          "label": "Measured efficiency",
+          "question": "Does the abstract report a concrete memory, throughput, latency, or compute comparison?",
+          "weight": 1.5
+        },
+        {
+          "id": "quality-tradeoff",
+          "label": "Quality tradeoff",
+          "question": "Does the abstract compare task quality while changing efficiency?",
+          "weight": 1.0
+        },
+        {
+          "id": "practical-system",
+          "label": "Practical implementation",
+          "question": "Does the abstract identify a concrete implementation, algorithm, or serving system?",
+          "weight": 1.0
+        }
+      ],
+      "exclusions": "",
+      "keywords": [
+        "memory",
+        "inference",
+        "efficient",
+        "attention",
+        "training",
+        "throughput"
+      ]
+    },
+    {
+      "fixture_key": "retrieval-personalization",
+      "question": "Which papers help build a research assistant that retrieves reliable evidence and adapts to a user's changing information needs? Focus on retrieval-augmented generation, evidence selection, and personalized language-model behavior.",
+      "preferences": [
+        {
+          "id": "retrieval-method",
+          "label": "Retrieval mechanism",
+          "question": "Does the abstract describe how supporting information is retrieved or selected?",
+          "weight": 1.5
+        },
+        {
+          "id": "grounding-evaluation",
+          "label": "Grounding evaluation",
+          "question": "Does the abstract explicitly evaluate factuality, correctness, or evidence quality?",
+          "weight": 1.0
+        },
+        {
+          "id": "personalized",
+          "label": "Personalized behavior",
+          "question": "Does the abstract explicitly study adaptation to an individual user's information or preferences?",
+          "weight": 1.0
+        }
+      ],
+      "exclusions": "",
+      "keywords": [
+        "retrieval",
+        "generation",
+        "knowledge",
+        "personalization",
+        "language",
+        "evidence"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2310.08560",
+      "paper_version": 2,
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "source_url": "https://arxiv.org/abs/2310.08560v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2304.03442",
+      "paper_version": 2,
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "source_url": "https://arxiv.org/abs/2304.03442v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2307.03172",
+      "paper_version": 3,
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "source_url": "https://arxiv.org/abs/2307.03172v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2310.11511",
+      "paper_version": 1,
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "source_url": "https://arxiv.org/abs/2310.11511v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2401.15884",
+      "paper_version": 3,
+      "title": "Corrective Retrieval Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2401.15884v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2005.11401",
+      "paper_version": 4,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "source_url": "https://arxiv.org/abs/2005.11401v4",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2305.18290",
+      "paper_version": 3,
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "source_url": "https://arxiv.org/abs/2305.18290v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2106.09685",
+      "paper_version": 2,
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2106.09685v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2305.14314",
+      "paper_version": 1,
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2305.14314v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2205.14135",
+      "paper_version": 2,
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "source_url": "https://arxiv.org/abs/2205.14135v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2309.06180",
+      "paper_version": 1,
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "source_url": "https://arxiv.org/abs/2309.06180v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2302.04761",
+      "paper_version": 1,
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "source_url": "https://arxiv.org/abs/2302.04761v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2210.03629",
+      "paper_version": 3,
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "source_url": "https://arxiv.org/abs/2210.03629v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2308.03688",
+      "paper_version": 3,
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "source_url": "https://arxiv.org/abs/2308.03688v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2310.06770",
+      "paper_version": 3,
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "source_url": "https://arxiv.org/abs/2310.06770v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2410.10813",
+      "paper_version": 2,
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "source_url": "https://arxiv.org/abs/2410.10813v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2405.14831",
+      "paper_version": 3,
+      "title": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2405.14831v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2309.12307",
+      "paper_version": 3,
+      "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+      "source_url": "https://arxiv.org/abs/2309.12307v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2401.18059",
+      "paper_version": 1,
+      "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "source_url": "https://arxiv.org/abs/2401.18059v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "agent-memory",
+      "arxiv_id": "2304.11406",
+      "paper_version": 4,
+      "title": "LaMP: When Large Language Models Meet Personalization",
+      "source_url": "https://arxiv.org/abs/2304.11406v4",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2310.08560",
+      "paper_version": 2,
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "source_url": "https://arxiv.org/abs/2310.08560v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2304.03442",
+      "paper_version": 2,
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "source_url": "https://arxiv.org/abs/2304.03442v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2307.03172",
+      "paper_version": 3,
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "source_url": "https://arxiv.org/abs/2307.03172v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2310.11511",
+      "paper_version": 1,
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "source_url": "https://arxiv.org/abs/2310.11511v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2401.15884",
+      "paper_version": 3,
+      "title": "Corrective Retrieval Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2401.15884v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2005.11401",
+      "paper_version": 4,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "source_url": "https://arxiv.org/abs/2005.11401v4",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2305.18290",
+      "paper_version": 3,
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "source_url": "https://arxiv.org/abs/2305.18290v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2106.09685",
+      "paper_version": 2,
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2106.09685v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2305.14314",
+      "paper_version": 1,
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2305.14314v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2205.14135",
+      "paper_version": 2,
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "source_url": "https://arxiv.org/abs/2205.14135v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2309.06180",
+      "paper_version": 1,
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "source_url": "https://arxiv.org/abs/2309.06180v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2302.04761",
+      "paper_version": 1,
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "source_url": "https://arxiv.org/abs/2302.04761v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2210.03629",
+      "paper_version": 3,
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "source_url": "https://arxiv.org/abs/2210.03629v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2308.03688",
+      "paper_version": 3,
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "source_url": "https://arxiv.org/abs/2308.03688v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2310.06770",
+      "paper_version": 3,
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "source_url": "https://arxiv.org/abs/2310.06770v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2410.10813",
+      "paper_version": 2,
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "source_url": "https://arxiv.org/abs/2410.10813v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2405.14831",
+      "paper_version": 3,
+      "title": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2405.14831v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2309.12307",
+      "paper_version": 3,
+      "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+      "source_url": "https://arxiv.org/abs/2309.12307v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2401.18059",
+      "paper_version": 1,
+      "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "source_url": "https://arxiv.org/abs/2401.18059v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "efficient-inference",
+      "arxiv_id": "2304.11406",
+      "paper_version": 4,
+      "title": "LaMP: When Large Language Models Meet Personalization",
+      "source_url": "https://arxiv.org/abs/2304.11406v4",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2310.08560",
+      "paper_version": 2,
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "source_url": "https://arxiv.org/abs/2310.08560v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2304.03442",
+      "paper_version": 2,
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "source_url": "https://arxiv.org/abs/2304.03442v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2307.03172",
+      "paper_version": 3,
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "source_url": "https://arxiv.org/abs/2307.03172v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2310.11511",
+      "paper_version": 1,
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "source_url": "https://arxiv.org/abs/2310.11511v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2401.15884",
+      "paper_version": 3,
+      "title": "Corrective Retrieval Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2401.15884v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2005.11401",
+      "paper_version": 4,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "source_url": "https://arxiv.org/abs/2005.11401v4",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2305.18290",
+      "paper_version": 3,
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "source_url": "https://arxiv.org/abs/2305.18290v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2106.09685",
+      "paper_version": 2,
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2106.09685v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2305.14314",
+      "paper_version": 1,
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2305.14314v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2205.14135",
+      "paper_version": 2,
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "source_url": "https://arxiv.org/abs/2205.14135v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2309.06180",
+      "paper_version": 1,
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "source_url": "https://arxiv.org/abs/2309.06180v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2302.04761",
+      "paper_version": 1,
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "source_url": "https://arxiv.org/abs/2302.04761v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2210.03629",
+      "paper_version": 3,
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "source_url": "https://arxiv.org/abs/2210.03629v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2308.03688",
+      "paper_version": 3,
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "source_url": "https://arxiv.org/abs/2308.03688v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2310.06770",
+      "paper_version": 3,
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "source_url": "https://arxiv.org/abs/2310.06770v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2410.10813",
+      "paper_version": 2,
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "source_url": "https://arxiv.org/abs/2410.10813v2",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2405.14831",
+      "paper_version": 3,
+      "title": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2405.14831v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2309.12307",
+      "paper_version": 3,
+      "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+      "source_url": "https://arxiv.org/abs/2309.12307v3",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2401.18059",
+      "paper_version": 1,
+      "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "source_url": "https://arxiv.org/abs/2401.18059v1",
+      "grade": null,
+      "notes": ""
+    },
+    {
+      "profile_key": "retrieval-personalization",
+      "arxiv_id": "2304.11406",
+      "paper_version": 4,
+      "title": "LaMP: When Large Language Models Meet Personalization",
+      "source_url": "https://arxiv.org/abs/2304.11406v4",
+      "grade": null,
+      "notes": ""
+    }
+  ]
+}

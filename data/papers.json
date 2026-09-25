@@ -1,0 +1,707 @@
+[
+  {
+    "arxiv_id": "2310.08560",
+    "version": 2,
+    "title": "MemGPT: Towards LLMs as Operating Systems",
+    "authors": [
+      "Packer, Charles",
+      "Wooders, Sarah",
+      "Lin, Kevin",
+      "Fang, Vivian",
+      "Patil, Shishir G.",
+      "Stoica, Ion",
+      "Gonzalez, Joseph E."
+    ],
+    "abstract": "Large language models (LLMs) have revolutionized AI, but are constrained by limited context windows, hindering their utility in tasks like extended conversations and document analysis. To enable using context beyond limited context windows, we propose virtual context management, a technique drawing inspiration from hierarchical memory systems in traditional operating systems that provide the appearance of large memory resources through data movement between fast and slow memory. Using this technique, we introduce MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in order to effectively provide extended context within the LLM's limited context window, and utilizes interrupts to manage control flow between itself and the user. We evaluate our OS-inspired design in two domains where the limited context windows of modern LLMs severely handicaps their performance: document analysis, where MemGPT is able to analyze large documents that far exceed the underlying LLM's context window, and multi-session chat, where MemGPT can create conversational agents that remember, reflect, and evolve dynamically through long-term interactions with their users. We release MemGPT code and data for our experiments at https://memgpt.ai.",
+    "categories": [
+      "cs.AI"
+    ],
+    "published": "2023-10-12",
+    "updated": "2024-02-12",
+    "source_url": "https://arxiv.org/abs/2310.08560v2",
+    "pdf_url": "https://arxiv.org/pdf/2310.08560v2",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:44:51.319798+00:00",
+      "metadata_url": "https://arxiv.org/abs/2310.08560",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "7e9ea28f6bffe59d3373a8da20d6a3d065feda8656f59f0f55daeb09ad23bc2e",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2304.03442",
+    "version": 2,
+    "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "authors": [
+      "Park, Joon Sung",
+      "O'Brien, Joseph C.",
+      "Cai, Carrie J.",
+      "Morris, Meredith Ringel",
+      "Liang, Percy",
+      "Bernstein, Michael S."
+    ],
+    "abstract": "Believable proxies of human behavior can empower interactive applications ranging from immersive environments to rehearsal spaces for interpersonal communication to prototyping tools. In this paper, we introduce generative agents--computational software agents that simulate believable human behavior. Generative agents wake up, cook breakfast, and head to work; artists paint, while authors write; they form opinions, notice each other, and initiate conversations; they remember and reflect on days past as they plan the next day. To enable generative agents, we describe an architecture that extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior. We instantiate generative agents to populate an interactive sandbox environment inspired by The Sims, where end users can interact with a small town of twenty five agents using natural language. In an evaluation, these generative agents produce believable individual and emergent social behaviors: for example, starting with only a single user-specified notion that one agent wants to throw a Valentine's Day party, the agents autonomously spread invitations to the party over the next two days, make new acquaintances, ask each other out on dates to the party, and coordinate to show up for the party together at the right time. We demonstrate through ablation that the components of our agent architecture--observation, planning, and reflection--each contribute critically to the believability of agent behavior. By fusing large language models with computational, interactive agents, this work introduces architectural and interaction patterns for enabling believable simulations of human behavior.",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2023-04-07",
+    "updated": "2023-08-06",
+    "source_url": "https://arxiv.org/abs/2304.03442v2",
+    "pdf_url": "https://arxiv.org/pdf/2304.03442v2",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:44:54.376269+00:00",
+      "metadata_url": "https://arxiv.org/abs/2304.03442",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "b9205ed79d058490ec68d28a5c70fff7f8ca61e4e3d6d01a39349e917c9d973c",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2307.03172",
+    "version": 3,
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": [
+      "Liu, Nelson F.",
+      "Lin, Kevin",
+      "Hewitt, John",
+      "Paranjape, Ashwin",
+      "Bevilacqua, Michele",
+      "Petroni, Fabio",
+      "Liang, Percy"
+    ],
+    "abstract": "While recent language models have the ability to take long contexts as input, relatively little is known about how well they use longer context. We analyze the performance of language models on two tasks that require identifying relevant information in their input contexts: multi-document question answering and key-value retrieval. We find that performance can degrade significantly when changing the position of relevant information, indicating that current language models do not robustly make use of information in long input contexts. In particular, we observe that performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must access relevant information in the middle of long contexts, even for explicitly long-context models. Our analysis provides a better understanding of how language models use their input context and provides new evaluation protocols for future long-context language models.",
+    "categories": [
+      "cs.CL"
+    ],
+    "published": "2023-07-06",
+    "updated": "2023-11-20",
+    "source_url": "https://arxiv.org/abs/2307.03172v3",
+    "pdf_url": "https://arxiv.org/pdf/2307.03172v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:44:57.493213+00:00",
+      "metadata_url": "https://arxiv.org/abs/2307.03172",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "9597f645fa2ed241ae31cd867771e71ea15ede9d498117e1d1b409403c10aa88",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2310.11511",
+    "version": 1,
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "authors": [
+      "Asai, Akari",
+      "Wu, Zeqiu",
+      "Wang, Yizhong",
+      "Sil, Avirup",
+      "Hajishirzi, Hannaneh"
+    ],
+    "abstract": "Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (Self-RAG) that enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand, and generates and reflects on retrieved passages and its own generations using special tokens, called reflection tokens. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements. Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2023-10-17",
+    "updated": "2023-10-17",
+    "source_url": "https://arxiv.org/abs/2310.11511v1",
+    "pdf_url": "https://arxiv.org/pdf/2310.11511v1",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:00.574375+00:00",
+      "metadata_url": "https://arxiv.org/abs/2310.11511",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "814a0385136a61001126f1bf731b56ffa68fd09e048d30a5d9272706cfdc64c4",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2401.15884",
+    "version": 3,
+    "title": "Corrective Retrieval Augmented Generation",
+    "authors": [
+      "Yan, Shi-Qi",
+      "Gu, Jia-Chen",
+      "Zhu, Yun",
+      "Ling, Zhen-Hua"
+    ],
+    "abstract": "Large language models (LLMs) inevitably exhibit hallucinations since the accuracy of generated texts cannot be secured solely by the parametric knowledge they encapsulate. Although retrieval-augmented generation (RAG) is a practicable complement to LLMs, it relies heavily on the relevance of retrieved documents, raising concerns about how the model behaves if retrieval goes wrong. To this end, we propose the Corrective Retrieval Augmented Generation (CRAG) to improve the robustness of generation. Specifically, a lightweight retrieval evaluator is designed to assess the overall quality of retrieved documents for a query, returning a confidence degree based on which different knowledge retrieval actions can be triggered. Since retrieval from static and limited corpora can only return sub-optimal documents, large-scale web searches are utilized as an extension for augmenting the retrieval results. Besides, a decompose-then-recompose algorithm is designed for retrieved documents to selectively focus on key information and filter out irrelevant information in them. CRAG is plug-and-play and can be seamlessly coupled with various RAG-based approaches. Experiments on four datasets covering short- and long-form generation tasks show that CRAG can significantly improve the performance of RAG-based approaches.",
+    "categories": [
+      "cs.CL"
+    ],
+    "published": "2024-01-29",
+    "updated": "2024-10-07",
+    "source_url": "https://arxiv.org/abs/2401.15884v3",
+    "pdf_url": "https://arxiv.org/pdf/2401.15884v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:03.669139+00:00",
+      "metadata_url": "https://arxiv.org/abs/2401.15884",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "ce4a1946517fcca3c66ecbf7c208b8a070aa3c143aef05ade5bb94ed903398ff",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2005.11401",
+    "version": 4,
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "authors": [
+      "Lewis, Patrick",
+      "Perez, Ethan",
+      "Piktus, Aleksandra",
+      "Petroni, Fabio",
+      "Karpukhin, Vladimir",
+      "Goyal, Naman",
+      "Küttler, Heinrich",
+      "Lewis, Mike",
+      "Yih, Wen-tau",
+      "Rocktäschel, Tim",
+      "Riedel, Sebastian",
+      "Kiela, Douwe"
+    ],
+    "abstract": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2020-05-22",
+    "updated": "2021-04-12",
+    "source_url": "https://arxiv.org/abs/2005.11401v4",
+    "pdf_url": "https://arxiv.org/pdf/2005.11401v4",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:06.769608+00:00",
+      "metadata_url": "https://arxiv.org/abs/2005.11401",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "766b22c091b5e3c8cdd736cd8c8d1529a5abe2f4895f6bd8f01df31f93851d55",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2305.18290",
+    "version": 3,
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "authors": [
+      "Rafailov, Rafael",
+      "Sharma, Archit",
+      "Mitchell, Eric",
+      "Ermon, Stefano",
+      "Manning, Christopher D.",
+      "Finn, Chelsea"
+    ],
+    "abstract": "While large-scale unsupervised language models (LMs) learn broad world knowledge and some reasoning skills, achieving precise control of their behavior is difficult due to the completely unsupervised nature of their training. Existing methods for gaining such steerability collect human labels of the relative quality of model generations and fine-tune the unsupervised LM to align with these preferences, often with reinforcement learning from human feedback (RLHF). However, RLHF is a complex and often unstable procedure, first fitting a reward model that reflects the human preferences, and then fine-tuning the large unsupervised LM using reinforcement learning to maximize this estimated reward without drifting too far from the original model. In this paper we introduce a new parameterization of the reward model in RLHF that enables extraction of the corresponding optimal policy in closed form, allowing us to solve the standard RLHF problem with only a simple classification loss. The resulting algorithm, which we call Direct Preference Optimization (DPO), is stable, performant, and computationally lightweight, eliminating the need for sampling from the LM during fine-tuning or performing significant hyperparameter tuning. Our experiments show that DPO can fine-tune LMs to align with human preferences as well as or better than existing methods. Notably, fine-tuning with DPO exceeds PPO-based RLHF in ability to control sentiment of generations, and matches or improves response quality in summarization and single-turn dialogue while being substantially simpler to implement and train.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "published": "2023-05-29",
+    "updated": "2024-07-29",
+    "source_url": "https://arxiv.org/abs/2305.18290v3",
+    "pdf_url": "https://arxiv.org/pdf/2305.18290v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:09.857388+00:00",
+      "metadata_url": "https://arxiv.org/abs/2305.18290",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "ec499d517ce19a00afe8ac2e74ba7dd853cb220c7f4f9157597ee65fa3422c38",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2106.09685",
+    "version": 2,
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors": [
+      "Hu, Edward J.",
+      "Shen, Yelong",
+      "Wallis, Phillip",
+      "Allen-Zhu, Zeyuan",
+      "Li, Yuanzhi",
+      "Wang, Shean",
+      "Wang, Lu",
+      "Chen, Weizhu"
+    ],
+    "abstract": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2021-06-17",
+    "updated": "2021-10-16",
+    "source_url": "https://arxiv.org/abs/2106.09685v2",
+    "pdf_url": "https://arxiv.org/pdf/2106.09685v2",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:12.971992+00:00",
+      "metadata_url": "https://arxiv.org/abs/2106.09685",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "342468ac7652b3c57afe1be5c800c84cfc7d19208f3ad5a6c0a8b7303622129f",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2305.14314",
+    "version": 1,
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+    "authors": [
+      "Dettmers, Tim",
+      "Pagnoni, Artidoro",
+      "Holtzman, Ari",
+      "Zettlemoyer, Luke"
+    ],
+    "abstract": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.",
+    "categories": [
+      "cs.LG"
+    ],
+    "published": "2023-05-23",
+    "updated": "2023-05-23",
+    "source_url": "https://arxiv.org/abs/2305.14314v1",
+    "pdf_url": "https://arxiv.org/pdf/2305.14314v1",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:16.067490+00:00",
+      "metadata_url": "https://arxiv.org/abs/2305.14314",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "6272079be29d11ca8f943e1c3e9ebb29ac5113ef009a0e85a6fb8b4fc88723ce",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2205.14135",
+    "version": 2,
+    "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+    "authors": [
+      "Dao, Tri",
+      "Fu, Daniel Y.",
+      "Ermon, Stefano",
+      "Rudra, Atri",
+      "Ré, Christopher"
+    ],
+    "abstract": "Transformers are slow and memory-hungry on long sequences, since the time and memory complexity of self-attention are quadratic in sequence length. Approximate attention methods have attempted to address this problem by trading off model quality to reduce the compute complexity, but often do not achieve wall-clock speedup. We argue that a missing principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3$\\times$ speedup on GPT-2 (seq. length 1K), and 2.4$\\times$ speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Transformers, yielding higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on long-document classification) and entirely new capabilities: the first Transformers to achieve better-than-chance performance on the Path-X challenge (seq. length 16K, 61.4% accuracy) and Path-256 (seq. length 64K, 63.1% accuracy).",
+    "categories": [
+      "cs.LG"
+    ],
+    "published": "2022-05-27",
+    "updated": "2022-06-23",
+    "source_url": "https://arxiv.org/abs/2205.14135v2",
+    "pdf_url": "https://arxiv.org/pdf/2205.14135v2",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:19.178151+00:00",
+      "metadata_url": "https://arxiv.org/abs/2205.14135",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "d77d1b2ddcb59a27325d021256458ef960a4b8b7d8c2c7d27c064611b87dfd32",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2309.06180",
+    "version": 1,
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "authors": [
+      "Kwon, Woosuk",
+      "Li, Zhuohan",
+      "Zhuang, Siyuan",
+      "Sheng, Ying",
+      "Zheng, Lianmin",
+      "Yu, Cody Hao",
+      "Gonzalez, Joseph E.",
+      "Zhang, Hao",
+      "Stoica, Ion"
+    ],
+    "abstract": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2-4$\\times$ with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "published": "2023-09-12",
+    "updated": "2023-09-12",
+    "source_url": "https://arxiv.org/abs/2309.06180v1",
+    "pdf_url": "https://arxiv.org/pdf/2309.06180v1",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:22.270234+00:00",
+      "metadata_url": "https://arxiv.org/abs/2309.06180",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "948f5a8aaaaba63091cd7d6d65180db1cdf63aca8dd412393429a832e8e36425",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2302.04761",
+    "version": 1,
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "authors": [
+      "Schick, Timo",
+      "Dwivedi-Yu, Jane",
+      "Dessì, Roberto",
+      "Raileanu, Roberta",
+      "Lomeli, Maria",
+      "Zettlemoyer, Luke",
+      "Cancedda, Nicola",
+      "Scialom, Thomas"
+    ],
+    "abstract": "Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller models excel. In this paper, we show that LMs can teach themselves to use external tools via simple APIs and achieve the best of both worlds. We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q\\&A system, two different search engines, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.",
+    "categories": [
+      "cs.CL"
+    ],
+    "published": "2023-02-09",
+    "updated": "2023-02-09",
+    "source_url": "https://arxiv.org/abs/2302.04761v1",
+    "pdf_url": "https://arxiv.org/pdf/2302.04761v1",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:25.378049+00:00",
+      "metadata_url": "https://arxiv.org/abs/2302.04761",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "d131ed654bcc879a2cc35030ad2658788743592dd5f0e10697fb2de943c4014e",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2210.03629",
+    "version": 3,
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "authors": [
+      "Yao, Shunyu",
+      "Zhao, Jeffrey",
+      "Yu, Dian",
+      "Du, Nan",
+      "Shafran, Izhak",
+      "Narasimhan, Karthik",
+      "Cao, Yuan"
+    ],
+    "abstract": "While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with external sources, such as knowledge bases or environments, to gather additional information. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines, as well as improved human interpretability and trustworthiness over methods without reasoning or acting components. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes issues of hallucination and error propagation prevalent in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. On two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% and 10% respectively, while being prompted with only one or two in-context examples. Project site with code: https://react-lm.github.io",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2022-10-06",
+    "updated": "2023-03-10",
+    "source_url": "https://arxiv.org/abs/2210.03629v3",
+    "pdf_url": "https://arxiv.org/pdf/2210.03629v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:28.487306+00:00",
+      "metadata_url": "https://arxiv.org/abs/2210.03629",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "d54d4d76519ed21b2bfeedd94901a9bb559802e0c0bde7e09fb1e0a8bcdb3679",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2308.03688",
+    "version": 3,
+    "title": "AgentBench: Evaluating LLMs as Agents",
+    "authors": [
+      "Liu, Xiao",
+      "Yu, Hao",
+      "Zhang, Hanchen",
+      "Xu, Yifan",
+      "Lei, Xuanyu",
+      "Lai, Hanyu",
+      "Gu, Yu",
+      "Ding, Hangliang",
+      "Men, Kaiwen",
+      "Yang, Kejuan",
+      "Zhang, Shudan",
+      "Deng, Xiang",
+      "Zeng, Aohan",
+      "Du, Zhengxiao",
+      "Zhang, Chenhui",
+      "Shen, Sheng",
+      "Zhang, Tianjun",
+      "Su, Yu",
+      "Sun, Huan",
+      "Huang, Minlie",
+      "Dong, Yuxiao",
+      "Tang, Jie"
+    ],
+    "abstract": "The potential of Large Language Model (LLM) as agents has been widely acknowledged recently. Thus, there is an urgent need to quantitatively \\textit{evaluate LLMs as agents} on challenging tasks in interactive environments. We present AgentBench, a multi-dimensional benchmark that consists of 8 distinct environments to assess LLM-as-Agent's reasoning and decision-making abilities. Our extensive test over \\num API-based and open-sourced (OSS) LLMs shows that, while top commercial LLMs present a strong ability of acting as agents in complex environments, there is a significant disparity in performance between them and many OSS competitors that are no larger than 70B. We identify the typical reasons of failures in environments and LLMs, showing that poor long-term reasoning, decision-making, and instruction following abilities are the main obstacles for developing usable LLM agents. Improving instruction following and training on high quality multi-round alignment data could improve agent performance. And different from existing assumptions, training on code present ambivalent impacts on different agent tasks. Datasets, environments, and an integrated evaluation package for AgentBench are released at https://github.com/THUDM/AgentBench.",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2023-08-07",
+    "updated": "2025-10-04",
+    "source_url": "https://arxiv.org/abs/2308.03688v3",
+    "pdf_url": "https://arxiv.org/pdf/2308.03688v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:31.605098+00:00",
+      "metadata_url": "https://arxiv.org/abs/2308.03688",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "d8c4ba4db4aeed3a7b7ce7f77d610d7e34b0e8db26a36463e2c0bdffcad8f22a",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2310.06770",
+    "version": 3,
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "authors": [
+      "Jimenez, Carlos E.",
+      "Yang, John",
+      "Wettig, Alexander",
+      "Yao, Shunyu",
+      "Pei, Kexin",
+      "Press, Ofir",
+      "Narasimhan, Karthik"
+    ],
+    "abstract": "Language models have outpaced our ability to evaluate them effectively, but for their future development it is essential to study the frontier of their capabilities. We find real-world software engineering to be a rich, sustainable, and challenging testbed for evaluating the next generation of language models. To this end, we introduce SWE-bench, an evaluation framework consisting of $2,294$ software engineering problems drawn from real GitHub issues and corresponding pull requests across $12$ popular Python repositories. Given a codebase along with a description of an issue to be resolved, a language model is tasked with editing the codebase to address the issue. Resolving issues in SWE-bench frequently requires understanding and coordinating changes across multiple functions, classes, and even files simultaneously, calling for models to interact with execution environments, process extremely long contexts and perform complex reasoning that goes far beyond traditional code generation tasks. Our evaluations show that both state-of-the-art proprietary models and our fine-tuned model SWE-Llama can resolve only the simplest issues. The best-performing model, Claude 2, is able to solve a mere $1.96$% of the issues. Advances on SWE-bench represent steps towards LMs that are more practical, intelligent, and autonomous.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "published": "2023-10-10",
+    "updated": "2024-11-11",
+    "source_url": "https://arxiv.org/abs/2310.06770v3",
+    "pdf_url": "https://arxiv.org/pdf/2310.06770v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:34.704825+00:00",
+      "metadata_url": "https://arxiv.org/abs/2310.06770",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "67a7b5b540a58a91f9b74da32682d5cc16f6c3224401294320b024b317d98722",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2410.10813",
+    "version": 2,
+    "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+    "authors": [
+      "Wu, Di",
+      "Wang, Hongwei",
+      "Yu, Wenhao",
+      "Zhang, Yuwei",
+      "Chang, Kai-Wei",
+      "Yu, Dong"
+    ],
+    "abstract": "Recent large language model (LLM)-driven chat assistant systems have integrated memory components to track user-assistant chat histories, enabling more accurate and personalized responses. However, their long-term memory capabilities in sustained interactions remain underexplored. We introduce LongMemEval, a comprehensive benchmark designed to evaluate five core long-term memory abilities of chat assistants: information extraction, multi-session reasoning, temporal reasoning, knowledge updates, and abstention. With 500 meticulously curated questions embedded within freely scalable user-assistant chat histories, LongMemEval presents a significant challenge to existing long-term memory systems, with commercial chat assistants and long-context LLMs showing a 30% accuracy drop on memorizing information across sustained interactions. We then present a unified framework that breaks down the long-term memory design into three stages: indexing, retrieval, and reading. Built upon key experimental insights, we propose several memory design optimizations including session decomposition for value granularity, fact-augmented key expansion for indexing, and time-aware query expansion for refining the search scope. Extensive experiments show that these optimizations greatly improve both memory recall and downstream question answering on LongMemEval. Overall, our study provides valuable resources and guidance for advancing the long-term memory capabilities of LLM-based chat assistants, paving the way toward more personalized and reliable conversational AI. Our benchmark and code are publicly available at https://github.com/xiaowu0162/LongMemEval.",
+    "categories": [
+      "cs.CL"
+    ],
+    "published": "2024-10-14",
+    "updated": "2025-03-04",
+    "source_url": "https://arxiv.org/abs/2410.10813v2",
+    "pdf_url": "https://arxiv.org/pdf/2410.10813v2",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:37.806857+00:00",
+      "metadata_url": "https://arxiv.org/abs/2410.10813",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "b3a722908c976801914dbb149f8cf3f4f8b535560f9c46a244b59c0d56355ed2",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2405.14831",
+    "version": 3,
+    "title": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "authors": [
+      "Gutiérrez, Bernal Jiménez",
+      "Shu, Yiheng",
+      "Gu, Yu",
+      "Yasunaga, Michihiro",
+      "Su, Yu"
+    ],
+    "abstract": "In order to thrive in hostile and ever-changing natural environments, mammalian brains evolved to store large amounts of knowledge about the world and continually integrate new information while avoiding catastrophic forgetting. Despite the impressive accomplishments, large language models (LLMs), even with retrieval-augmented generation (RAG), still struggle to efficiently and effectively integrate a large amount of new experiences after pre-training. In this work, we introduce HippoRAG, a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory to enable deeper and more efficient knowledge integration over new experiences. HippoRAG synergistically orchestrates LLMs, knowledge graphs, and the Personalized PageRank algorithm to mimic the different roles of neocortex and hippocampus in human memory. We compare HippoRAG with existing RAG methods on multi-hop question answering and show that our method outperforms the state-of-the-art methods remarkably, by up to 20%. Single-step retrieval with HippoRAG achieves comparable or better performance than iterative retrieval like IRCoT while being 10-30 times cheaper and 6-13 times faster, and integrating HippoRAG into IRCoT brings further substantial gains. Finally, we show that our method can tackle new types of scenarios that are out of reach of existing methods. Code and data are available at https://github.com/OSU-NLP-Group/HippoRAG.",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "published": "2024-05-23",
+    "updated": "2025-01-14",
+    "source_url": "https://arxiv.org/abs/2405.14831v3",
+    "pdf_url": "https://arxiv.org/pdf/2405.14831v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:40.893499+00:00",
+      "metadata_url": "https://arxiv.org/abs/2405.14831",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "37d7746e12f1c4202612029336303a5b6248d167f31eca541d20e8290aa4ccb1",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2309.12307",
+    "version": 3,
+    "title": "LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models",
+    "authors": [
+      "Chen, Yukang",
+      "Qian, Shengju",
+      "Tang, Haotian",
+      "Lai, Xin",
+      "Liu, Zhijian",
+      "Han, Song",
+      "Jia, Jiaya"
+    ],
+    "abstract": "We present LongLoRA, an efficient fine-tuning approach that extends the context sizes of pre-trained large language models (LLMs), with limited computation cost. Typically, training LLMs with long context sizes is computationally expensive, requiring extensive training hours and GPU resources. For example, training on the context length of 8192 needs 16x computational costs in self-attention layers as that of 2048. In this paper, we speed up the context extension of LLMs in two aspects. On the one hand, although dense global attention is needed during inference, fine-tuning the model can be effectively and efficiently done by sparse local attention. The proposed shifted sparse attention effectively enables context extension, leading to non-trivial computation saving with similar performance to fine-tuning with vanilla attention. Particularly, it can be implemented with only two lines of code in training, while being optional in inference. On the other hand, we revisit the parameter-efficient fine-tuning regime for context expansion. Notably, we find that LoRA for context extension works well under the premise of trainable embedding and normalization. LongLoRA combines this improved LoRA with S^2-Attn. LongLoRA demonstrates strong empirical results on various tasks on Llama2 models from 7B/13B to 70B. LongLoRA extends Llama2 7B from 4k context to 100k, or Llama2 70B to 32k on a single 8x A100 machine. LongLoRA extends models' context while retaining their original architectures, and is compatible with most existing techniques, like Flash-Attention2. In addition, we further conduct supervised fine-tuning with LongLoRA and our long instruction-following LongAlpaca dataset.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "published": "2023-09-21",
+    "updated": "2024-03-08",
+    "source_url": "https://arxiv.org/abs/2309.12307v3",
+    "pdf_url": "https://arxiv.org/pdf/2309.12307v3",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:44.001466+00:00",
+      "metadata_url": "https://arxiv.org/abs/2309.12307",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "date_precision": "day",
+      "abstract_sha256": "66a09eb3f81ad776483bddd4f28290f4b00d3047f8c965de88c97239f0d3ccc5",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2401.18059",
+    "version": 1,
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "authors": [
+      "Sarthi, Parth",
+      "Abdullah, Salman",
+      "Tuli, Aditi",
+      "Khanna, Shubh",
+      "Goldie, Anna",
+      "Manning, Christopher D."
+    ],
+    "abstract": "Retrieval-augmented language models can better adapt to changes in world state and incorporate long-tail knowledge. However, most existing methods retrieve only short contiguous chunks from a retrieval corpus, limiting holistic understanding of the overall document context. We introduce the novel approach of recursively embedding, clustering, and summarizing chunks of text, constructing a tree with differing levels of summarization from the bottom up. At inference time, our RAPTOR model retrieves from this tree, integrating information across lengthy documents at different levels of abstraction. Controlled experiments show that retrieval with recursive summaries offers significant improvements over traditional retrieval-augmented LMs on several tasks. On question-answering tasks that involve complex, multi-step reasoning, we show state-of-the-art results; for example, by coupling RAPTOR retrieval with the use of GPT-4, we can improve the best performance on the QuALITY benchmark by 20% in absolute accuracy.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "published": "2024-01-31",
+    "updated": "2024-01-31",
+    "source_url": "https://arxiv.org/abs/2401.18059v1",
+    "pdf_url": "https://arxiv.org/pdf/2401.18059v1",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:47.112990+00:00",
+      "metadata_url": "https://arxiv.org/abs/2401.18059",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "a19b7fdf3d7103b0be78795c9fd7a47476c3eb661aec411ef6fbcf5adc3a4110",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  },
+  {
+    "arxiv_id": "2304.11406",
+    "version": 4,
+    "title": "LaMP: When Large Language Models Meet Personalization",
+    "authors": [
+      "Salemi, Alireza",
+      "Mysore, Sheshera",
+      "Bendersky, Michael",
+      "Zamani, Hamed"
+    ],
+    "abstract": "This paper highlights the importance of personalization in large language models and introduces the LaMP benchmark -- a novel benchmark for training and evaluating language models for producing personalized outputs. LaMP offers a comprehensive evaluation framework with diverse language tasks and multiple entries for each user profile. It consists of seven personalized tasks, spanning three text classification and four text generation tasks. We additionally propose two retrieval augmentation approaches that retrieve personal items from each user profile for personalizing language model outputs. To this aim, we study various retrieval models, including term matching, semantic matching, and time-aware methods. Extensive experiments on LaMP for zero-shot and fine-tuned language models demonstrate the efficacy of the proposed retrieval augmentation approach and highlight the impact of personalization in various natural language tasks.",
+    "categories": [
+      "cs.CL"
+    ],
+    "published": "2023-04-22",
+    "updated": "2024-06-05",
+    "source_url": "https://arxiv.org/abs/2304.11406v4",
+    "pdf_url": "https://arxiv.org/pdf/2304.11406v4",
+    "source": "bundled",
+    "provenance": {
+      "retrieved_at": "2026-09-25T04:45:50.203712+00:00",
+      "metadata_url": "https://arxiv.org/abs/2304.11406",
+      "retrieval_method": "official_arxiv_abstract_page_citation_meta_tags",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "date_precision": "day",
+      "abstract_sha256": "417cbafdef8d9cab59c31e66517ea657ca97aa93ae23998eff674a172bffdc0d",
+      "content_note": "Title, authors and abstract metadata only; no paper full text. License URL is the article license reported by arXiv.",
+      "metadata_license": "CC0-1.0",
+      "metadata_terms_url": "https://info.arxiv.org/help/api/tou.html"
+    }
+  }
+]

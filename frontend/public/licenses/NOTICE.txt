@@ -1,0 +1,11 @@
+Jev Scout frontend third-party notices
+
+Original license and copyright notices included in this directory:
+
+DM Sans / @fontsource/dm-sans — dm-sans.txt (SIL Open Font License 1.1)
+Instrument Serif / @fontsource/instrument-serif — instrument-serif.txt (SIL Open Font License 1.1)
+Lucide React icons — lucide.txt (ISC; portions originate from Feather)
+React — react.txt (MIT)
+React DOM — react-dom.txt (MIT)
+
+The font files are self-hosted. Fonts and third-party libraries retain their respective licenses.

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-scout"
+version = "0.1.0"
+description = "A research inbox with evidence-linked, provider-aware paper triage."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+  "fastapi==0.141.1",
+  "httpx==0.28.1",
+  "pydantic==2.13.5",
+  "uvicorn==0.52.4",
+  "python-dotenv>=1.0,<2",
+  "defusedxml>=0.7.1,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9,<10", "pytest-asyncio>=1,<2", "ruff>=0.14,<1", "pytest-cov>=7,<8"]
+local = ["torch>=2.6,<3", "transformers>=4.51,<6", "accelerate>=1,<2", "safetensors>=0.5,<1"]
+
+[project.scripts]
+jev-scout = "jev_scout.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/jev-scout/data" = ["data/papers.json", "data/profiles.json", "data/annotations.template.json", "data/README.md", "data/SOURCES.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]

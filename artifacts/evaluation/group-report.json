@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0",
+  "available": true,
+  "quality_evaluated": false,
+  "generated_at": "2026-09-25T04:58:29.239000+00:00",
+  "dataset": {
+    "papers": 4,
+    "all_papers": 20,
+    "profiles": 3,
+    "pairs": 12,
+    "sha256": "33c3be19c69868bd0372ed1c2a2bde2eece6dcbb2838f5d4799ea038e9e91df5",
+    "provenance": "Attributed public arXiv abstract metadata; curated demonstration collection, not a representative research feed.",
+    "label_status": "unreviewed",
+    "label_provenance": {
+      "label_source": "unreviewed",
+      "independent_review": false
+    },
+    "labelled_pairs": 0
+  },
+  "protocol": {
+    "k": 5,
+    "relevance_grades": {
+      "0": "irrelevant",
+      "1": "partly useful",
+      "2": "directly useful"
+    },
+    "positive_threshold": 1,
+    "gain": "2^grade - 1",
+    "precision_denominator": 5,
+    "zero_relevant_policy": "nDCG and recall are 0",
+    "tie_break": "arxiv_id ascending",
+    "aggregation": "macro mean over fully labelled profile candidate sets",
+    "split": "group",
+    "cutoff": null,
+    "seed": "jev-scout-v1",
+    "training_papers": 16,
+    "training_groups": [
+      "2106.09685",
+      "2205.14135",
+      "2210.03629",
+      "2302.04761",
+      "2304.03442",
+      "2304.11406",
+      "2305.14314",
+      "2305.18290",
+      "2307.03172",
+      "2309.06180",
+      "2309.12307",
+      "2310.06770",
+      "2310.08560",
+      "2310.11511",
+      "2401.18059",
+      "2405.14831"
+    ],
+    "evaluation_groups": [
+      "2005.11401",
+      "2308.03688",
+      "2401.15884",
+      "2410.10813"
+    ],
+    "trained_model": false
+  },
+  "methods": [
+    {
+      "id": "keyword-coverage",
+      "label": "Keyword coverage",
+      "mode": "baseline",
+      "status": "completed",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 12,
+        "elapsed_ms": 1.6015000001061708,
+        "latency_p50_ms": 0.5819000070914626,
+        "latency_p95_ms": 0.5877999938093126,
+        "latency_unit": "one_profile_full_corpus",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "rankings": {
+        "agent-memory": [
+          "2410.10813",
+          "2005.11401",
+          "2308.03688",
+          "2401.15884"
+        ],
+        "efficient-inference": [
+          "2005.11401",
+          "2308.03688",
+          "2410.10813",
+          "2401.15884"
+        ],
+        "retrieval-personalization": [
+          "2005.11401",
+          "2401.15884",
+          "2410.10813",
+          "2308.03688"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2401.15884": 0.6666666666666666,
+          "2005.11401": 0.6666666666666666,
+          "2308.03688": 0.6666666666666666,
+          "2410.10813": 1.3333333333333333
+        },
+        "efficient-inference": {
+          "2401.15884": 0.0,
+          "2005.11401": 0.3333333333333333,
+          "2308.03688": 0.3333333333333333,
+          "2410.10813": 0.3333333333333333
+        },
+        "retrieval-personalization": {
+          "2401.15884": 1.3333333333333333,
+          "2005.11401": 1.3333333333333333,
+          "2308.03688": 0.3333333333333333,
+          "2410.10813": 1.0
+        }
+      }
+    },
+    {
+      "id": "tfidf",
+      "label": "TF-IDF cosine (title ×2)",
+      "mode": "baseline",
+      "status": "completed",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 12,
+        "elapsed_ms": 1.0574999905657023,
+        "latency_p50_ms": 0.3179999766871333,
+        "latency_p95_ms": 0.4200999974273145,
+        "latency_unit": "one_profile_full_corpus",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "rankings": {
+        "agent-memory": [
+          "2410.10813",
+          "2308.03688",
+          "2005.11401",
+          "2401.15884"
+        ],
+        "efficient-inference": [
+          "2410.10813",
+          "2308.03688",
+          "2005.11401",
+          "2401.15884"
+        ],
+        "retrieval-personalization": [
+          "2401.15884",
+          "2005.11401",
+          "2410.10813",
+          "2308.03688"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2401.15884": 0.0745752993547564,
+          "2005.11401": 0.08557129563508803,
+          "2308.03688": 0.1353744290072673,
+          "2410.10813": 0.177835899685847
+        },
+        "efficient-inference": {
+          "2401.15884": 0.0,
+          "2005.11401": 0.07902048532225146,
+          "2308.03688": 0.1042979732507662,
+          "2410.10813": 0.11271753527492762
+        },
+        "retrieval-personalization": {
+          "2401.15884": 0.2473894777544159,
+          "2005.11401": 0.22456064827804592,
+          "2308.03688": 0.016341513620321463,
+          "2410.10813": 0.05815012808624468
+        }
+      }
+    },
+    {
+      "id": "bm25",
+      "label": "BM25 (title ×2)",
+      "mode": "baseline",
+      "status": "completed",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 12,
+        "elapsed_ms": 0.5469000025186688,
+        "latency_p50_ms": 0.17419998766854405,
+        "latency_p95_ms": 0.19639998208731413,
+        "latency_unit": "one_profile_full_corpus",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "rankings": {
+        "agent-memory": [
+          "2410.10813",
+          "2308.03688",
+          "2005.11401",
+          "2401.15884"
+        ],
+        "efficient-inference": [
+          "2308.03688",
+          "2410.10813",
+          "2005.11401",
+          "2401.15884"
+        ],
+        "retrieval-personalization": [
+          "2401.15884",
+          "2005.11401",
+          "2410.10813",
+          "2308.03688"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2401.15884": 1.0726637400987267,
+          "2005.11401": 1.678873906152536,
+          "2308.03688": 2.621515059465431,
+          "2410.10813": 3.5504880523773705
+        },
+        "efficient-inference": {
+          "2401.15884": 0.0,
+          "2005.11401": 1.1386030138173708,
+          "2308.03688": 1.7194767753878304,
+          "2410.10813": 1.354155589074607
+        },
+        "retrieval-personalization": {
+          "2401.15884": 2.604103006629816,
+          "2005.11401": 2.569969262679529,
+          "2308.03688": 0.11139254175872615,
+          "2410.10813": 0.7965983352743143
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "No quality claim is possible without reviewed relevance annotations for complete candidate sets.",
+    "Author-reference labels, if imported, are subjective and are not an independent user study.",
+    "The 20-paper starter corpus is small and selected for demonstration; do not generalize its results.",
+    "Abstract-level evidence cannot establish findings that require the full paper.",
+    "No measured user time savings, deployment traffic, or real-user adoption is claimed.",
+    "No calibration metrics are reported without declared event probabilities and observed outcomes; model score confidence is uncalibrated.",
+    "Runtime is a local one-pass observation; lexical per-profile timings and live per-pair timings have different units.",
+    "Group and time holdouts prevent document-family overlap; they do not by themselves validate annotation independence or eliminate corpus-selection bias."
+  ]
+}

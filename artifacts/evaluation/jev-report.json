@@ -1,0 +1,1649 @@
+{
+  "schema_version": "1.0",
+  "available": true,
+  "quality_evaluated": false,
+  "generated_at": "2026-09-25T07:53:20.183851+00:00",
+  "dataset": {
+    "papers": 20,
+    "all_papers": 20,
+    "profiles": 3,
+    "pairs": 60,
+    "sha256": "c7d58f5740727caab1f555efe88c77cad3f19b1edf9f9060d34db5216c00a3eb",
+    "provenance": "Attributed public arXiv abstract metadata; curated demonstration collection, not a representative research feed.",
+    "label_status": "unreviewed",
+    "label_provenance": {
+      "label_source": "unreviewed",
+      "independent_review": false
+    },
+    "labelled_pairs": 0
+  },
+  "protocol": {
+    "k": 5,
+    "relevance_grades": {
+      "0": "irrelevant",
+      "1": "partly useful",
+      "2": "directly useful"
+    },
+    "positive_threshold": 1,
+    "gain": "2^grade - 1",
+    "precision_denominator": 5,
+    "zero_relevant_policy": "nDCG and recall are 0",
+    "tie_break": "arxiv_id ascending",
+    "aggregation": "macro mean over fully labelled profile candidate sets",
+    "split": "all",
+    "cutoff": null,
+    "seed": "jev-scout-v1",
+    "training_papers": 0,
+    "training_groups": [],
+    "evaluation_groups": [
+      "2005.11401",
+      "2106.09685",
+      "2205.14135",
+      "2210.03629",
+      "2302.04761",
+      "2304.03442",
+      "2304.11406",
+      "2305.14314",
+      "2305.18290",
+      "2307.03172",
+      "2308.03688",
+      "2309.06180",
+      "2309.12307",
+      "2310.06770",
+      "2310.08560",
+      "2310.11511",
+      "2401.15884",
+      "2401.18059",
+      "2405.14831",
+      "2410.10813"
+    ],
+    "trained_model": false
+  },
+  "methods": [
+    {
+      "id": "keyword-coverage",
+      "label": "Keyword coverage",
+      "mode": "baseline",
+      "status": "completed",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 60,
+        "elapsed_ms": 6.619199994020164,
+        "latency_p50_ms": 2.28459999198094,
+        "latency_p95_ms": 2.3492000182159245,
+        "latency_unit": "one_profile_full_corpus",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "rankings": {
+        "agent-memory": [
+          "2310.08560",
+          "2410.10813",
+          "2205.14135",
+          "2307.03172",
+          "2401.18059",
+          "2405.14831",
+          "2005.11401",
+          "2304.03442",
+          "2308.03688",
+          "2309.12307",
+          "2310.11511",
+          "2401.15884",
+          "2106.09685",
+          "2210.03629",
+          "2304.11406",
+          "2305.14314",
+          "2309.06180",
+          "2310.06770",
+          "2302.04761",
+          "2305.18290"
+        ],
+        "efficient-inference": [
+          "2106.09685",
+          "2205.14135",
+          "2309.06180",
+          "2309.12307",
+          "2305.14314",
+          "2405.14831",
+          "2005.11401",
+          "2304.11406",
+          "2305.18290",
+          "2308.03688",
+          "2310.08560",
+          "2310.11511",
+          "2401.18059",
+          "2410.10813",
+          "2210.03629",
+          "2302.04761",
+          "2304.03442",
+          "2307.03172",
+          "2310.06770",
+          "2401.15884"
+        ],
+        "retrieval-personalization": [
+          "2005.11401",
+          "2304.11406",
+          "2310.11511",
+          "2401.15884",
+          "2405.14831",
+          "2210.03629",
+          "2401.18059",
+          "2410.10813",
+          "2305.18290",
+          "2307.03172",
+          "2310.06770",
+          "2106.09685",
+          "2302.04761",
+          "2304.03442",
+          "2305.14314",
+          "2308.03688",
+          "2309.06180",
+          "2309.12307",
+          "2310.08560",
+          "2205.14135"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2310.08560": 1.6666666666666667,
+          "2304.03442": 0.6666666666666666,
+          "2307.03172": 1.0,
+          "2310.11511": 0.6666666666666666,
+          "2401.15884": 0.6666666666666666,
+          "2005.11401": 0.6666666666666666,
+          "2305.18290": 0.0,
+          "2106.09685": 0.3333333333333333,
+          "2305.14314": 0.3333333333333333,
+          "2205.14135": 1.0,
+          "2309.06180": 0.3333333333333333,
+          "2302.04761": 0.0,
+          "2210.03629": 0.3333333333333333,
+          "2308.03688": 0.6666666666666666,
+          "2310.06770": 0.3333333333333333,
+          "2410.10813": 1.3333333333333333,
+          "2405.14831": 1.0,
+          "2309.12307": 0.6666666666666666,
+          "2401.18059": 1.0,
+          "2304.11406": 0.3333333333333333
+        },
+        "efficient-inference": {
+          "2310.08560": 0.3333333333333333,
+          "2304.03442": 0.0,
+          "2307.03172": 0.0,
+          "2310.11511": 0.3333333333333333,
+          "2401.15884": 0.0,
+          "2005.11401": 0.3333333333333333,
+          "2305.18290": 0.3333333333333333,
+          "2106.09685": 1.3333333333333333,
+          "2305.14314": 1.0,
+          "2205.14135": 1.3333333333333333,
+          "2309.06180": 1.3333333333333333,
+          "2302.04761": 0.0,
+          "2210.03629": 0.0,
+          "2308.03688": 0.3333333333333333,
+          "2310.06770": 0.0,
+          "2410.10813": 0.3333333333333333,
+          "2405.14831": 1.0,
+          "2309.12307": 1.3333333333333333,
+          "2401.18059": 0.3333333333333333,
+          "2304.11406": 0.3333333333333333
+        },
+        "retrieval-personalization": {
+          "2310.08560": 0.3333333333333333,
+          "2304.03442": 0.3333333333333333,
+          "2307.03172": 0.6666666666666666,
+          "2310.11511": 1.3333333333333333,
+          "2401.15884": 1.3333333333333333,
+          "2005.11401": 1.3333333333333333,
+          "2305.18290": 0.6666666666666666,
+          "2106.09685": 0.3333333333333333,
+          "2305.14314": 0.3333333333333333,
+          "2205.14135": 0.0,
+          "2309.06180": 0.3333333333333333,
+          "2302.04761": 0.3333333333333333,
+          "2210.03629": 1.0,
+          "2308.03688": 0.3333333333333333,
+          "2310.06770": 0.6666666666666666,
+          "2410.10813": 1.0,
+          "2405.14831": 1.3333333333333333,
+          "2309.12307": 0.3333333333333333,
+          "2401.18059": 1.0,
+          "2304.11406": 1.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "tfidf",
+      "label": "TF-IDF cosine (title ×2)",
+      "mode": "baseline",
+      "status": "completed",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 60,
+        "elapsed_ms": 4.789600003277883,
+        "latency_p50_ms": 1.5321999962907284,
+        "latency_p95_ms": 1.7506000003777444,
+        "latency_unit": "one_profile_full_corpus",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "rankings": {
+        "agent-memory": [
+          "2310.08560",
+          "2304.03442",
+          "2307.03172",
+          "2410.10813",
+          "2308.03688",
+          "2405.14831",
+          "2401.18059",
+          "2309.12307",
+          "2205.14135",
+          "2005.11401",
+          "2401.15884",
+          "2310.11511",
+          "2309.06180",
+          "2304.11406",
+          "2305.14314",
+          "2210.03629",
+          "2106.09685",
+          "2310.06770",
+          "2302.04761",
+          "2305.18290"
+        ],
+        "efficient-inference": [
+          "2309.12307",
+          "2309.06180",
+          "2205.14135",
+          "2106.09685",
+          "2305.14314",
+          "2405.14831",
+          "2410.10813",
+          "2310.08560",
+          "2005.11401",
+          "2401.18059",
+          "2308.03688",
+          "2310.11511",
+          "2304.11406",
+          "2305.18290",
+          "2210.03629",
+          "2302.04761",
+          "2304.03442",
+          "2307.03172",
+          "2310.06770",
+          "2401.15884"
+        ],
+        "retrieval-personalization": [
+          "2304.11406",
+          "2401.15884",
+          "2005.11401",
+          "2310.11511",
+          "2405.14831",
+          "2401.18059",
+          "2310.06770",
+          "2210.03629",
+          "2307.03172",
+          "2410.10813",
+          "2305.18290",
+          "2302.04761",
+          "2106.09685",
+          "2309.06180",
+          "2304.03442",
+          "2309.12307",
+          "2308.03688",
+          "2310.08560",
+          "2305.14314",
+          "2205.14135"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2310.08560": 0.19814340074354053,
+          "2304.03442": 0.1347578292659958,
+          "2307.03172": 0.12185113843824177,
+          "2310.11511": 0.058215005894713824,
+          "2401.15884": 0.06914826352523525,
+          "2005.11401": 0.07070245508787854,
+          "2305.18290": 0.0,
+          "2106.09685": 0.015982602357754238,
+          "2305.14314": 0.032958404010694546,
+          "2205.14135": 0.0737775110339895,
+          "2309.06180": 0.05173988083446273,
+          "2302.04761": 0.0,
+          "2210.03629": 0.017251774499906888,
+          "2308.03688": 0.11466559475026397,
+          "2310.06770": 0.011724259176110806,
+          "2410.10813": 0.11653092575330334,
+          "2405.14831": 0.10477682652944208,
+          "2309.12307": 0.08333993608023778,
+          "2401.18059": 0.09532637847423042,
+          "2304.11406": 0.04404811456446123
+        },
+        "efficient-inference": {
+          "2310.08560": 0.04197664220555249,
+          "2304.03442": 0.0,
+          "2307.03172": 0.0,
+          "2310.11511": 0.025635070370228708,
+          "2401.15884": 0.0,
+          "2005.11401": 0.03488005976936219,
+          "2305.18290": 0.013681955370436972,
+          "2106.09685": 0.1033460211909789,
+          "2305.14314": 0.08333215488009096,
+          "2205.14135": 0.16327145878731977,
+          "2309.06180": 0.19281685895424275,
+          "2302.04761": 0.0,
+          "2210.03629": 0.0,
+          "2308.03688": 0.027721358613279033,
+          "2310.06770": 0.0,
+          "2410.10813": 0.04677247973863066,
+          "2405.14831": 0.0755289388197472,
+          "2309.12307": 0.19897183203661156,
+          "2401.18059": 0.032061079766851026,
+          "2304.11406": 0.01946109312374461
+        },
+        "retrieval-personalization": {
+          "2310.08560": 0.006262253087672577,
+          "2304.03442": 0.012117100214340775,
+          "2307.03172": 0.043950324659845406,
+          "2310.11511": 0.13071180610995445,
+          "2401.15884": 0.165791111821744,
+          "2005.11401": 0.1547554752184551,
+          "2305.18290": 0.027701625390958478,
+          "2106.09685": 0.013766182292627483,
+          "2305.14314": 0.004985218119398481,
+          "2205.14135": 0.0,
+          "2309.06180": 0.013303935964493424,
+          "2302.04761": 0.01574865962540173,
+          "2210.03629": 0.050749877548514635,
+          "2308.03688": 0.006373671663496323,
+          "2310.06770": 0.050781606035125965,
+          "2410.10813": 0.03972164332673511,
+          "2405.14831": 0.11778685865208177,
+          "2309.12307": 0.011382898385521669,
+          "2401.18059": 0.09511291531599869,
+          "2304.11406": 0.28385013729512815
+        }
+      }
+    },
+    {
+      "id": "bm25",
+      "label": "BM25 (title ×2)",
+      "mode": "baseline",
+      "status": "completed",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 60,
+        "elapsed_ms": 2.716600021813065,
+        "latency_p50_ms": 0.9004000166896731,
+        "latency_p95_ms": 0.9082999895326793,
+        "latency_unit": "one_profile_full_corpus",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "rankings": {
+        "agent-memory": [
+          "2310.08560",
+          "2304.03442",
+          "2410.10813",
+          "2307.03172",
+          "2405.14831",
+          "2308.03688",
+          "2401.18059",
+          "2205.14135",
+          "2309.12307",
+          "2005.11401",
+          "2401.15884",
+          "2310.11511",
+          "2309.06180",
+          "2304.11406",
+          "2305.14314",
+          "2210.03629",
+          "2106.09685",
+          "2310.06770",
+          "2302.04761",
+          "2305.18290"
+        ],
+        "efficient-inference": [
+          "2309.12307",
+          "2309.06180",
+          "2205.14135",
+          "2106.09685",
+          "2305.14314",
+          "2405.14831",
+          "2410.10813",
+          "2401.18059",
+          "2310.08560",
+          "2310.11511",
+          "2005.11401",
+          "2308.03688",
+          "2304.11406",
+          "2305.18290",
+          "2210.03629",
+          "2302.04761",
+          "2304.03442",
+          "2307.03172",
+          "2310.06770",
+          "2401.15884"
+        ],
+        "retrieval-personalization": [
+          "2304.11406",
+          "2401.15884",
+          "2005.11401",
+          "2310.11511",
+          "2405.14831",
+          "2401.18059",
+          "2210.03629",
+          "2410.10813",
+          "2310.06770",
+          "2307.03172",
+          "2305.18290",
+          "2302.04761",
+          "2106.09685",
+          "2304.03442",
+          "2309.06180",
+          "2309.12307",
+          "2308.03688",
+          "2310.08560",
+          "2305.14314",
+          "2205.14135"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2310.08560": 8.422789571719838,
+          "2304.03442": 5.4363775678543185,
+          "2307.03172": 4.07053770921139,
+          "2310.11511": 2.279999326455935,
+          "2401.15884": 2.40722214847883,
+          "2005.11401": 2.861807609998346,
+          "2305.18290": 0.0,
+          "2106.09685": 0.8946991454107103,
+          "2305.14314": 1.4498480137697296,
+          "2205.14135": 3.478322883247488,
+          "2309.06180": 1.7227323104699206,
+          "2302.04761": 0.0,
+          "2210.03629": 0.9800655414879474,
+          "2308.03688": 3.9827087918439688,
+          "2310.06770": 0.6064937045829685,
+          "2410.10813": 4.8036082985246855,
+          "2405.14831": 3.984884268109691,
+          "2309.12307": 2.9899010015846352,
+          "2401.18059": 3.597229045318287,
+          "2304.11406": 1.542064823230292
+        },
+        "efficient-inference": {
+          "2310.08560": 1.637088578664531,
+          "2304.03442": 0.0,
+          "2307.03172": 0.0,
+          "2310.11511": 1.5103612369426724,
+          "2401.15884": 0.0,
+          "2005.11401": 1.488558896595755,
+          "2305.18290": 0.8521535153535337,
+          "2106.09685": 5.758171439187686,
+          "2305.14314": 4.218580745584928,
+          "2205.14135": 7.6329200064923395,
+          "2309.06180": 8.559093178276452,
+          "2302.04761": 0.0,
+          "2210.03629": 0.0,
+          "2308.03688": 1.294898021201531,
+          "2310.06770": 0.0,
+          "2410.10813": 1.7684391675188995,
+          "2405.14831": 3.7385016964006814,
+          "2309.12307": 8.726103818525651,
+          "2401.18059": 1.7411543221490307,
+          "2304.11406": 1.0634685627865694
+        },
+        "retrieval-personalization": {
+          "2310.08560": 0.07848668303505633,
+          "2304.03442": 0.12053692134566926,
+          "2307.03172": 1.15314581134706,
+          "2310.11511": 4.59033883779058,
+          "2401.15884": 5.0548661668244135,
+          "2005.11401": 4.948385558002834,
+          "2305.18290": 0.9649814877776651,
+          "2106.09685": 0.12483750862783108,
+          "2305.14314": 0.06548509281129802,
+          "2205.14135": 0.0,
+          "2309.06180": 0.11972809596217955,
+          "2302.04761": 0.12986525019327894,
+          "2210.03629": 1.970156343661658,
+          "2308.03688": 0.07863680579899855,
+          "2310.06770": 1.5545057938662046,
+          "2410.10813": 1.8397434925873601,
+          "2405.14831": 4.0667075015807574,
+          "2309.12307": 0.11110020993148607,
+          "2401.18059": 2.858887069087489,
+          "2304.11406": 7.667429283044275
+        }
+      }
+    },
+    {
+      "id": "jev",
+      "label": "Jev (live)",
+      "mode": "jev",
+      "model": "typesafe/jev-1.13",
+      "provider_host": "openrouter.ai",
+      "status": "partial",
+      "quality": {
+        "evaluated": false,
+        "ndcg_at_5": null,
+        "precision_at_5": null,
+        "recall_at_5": null,
+        "brier": null,
+        "ece": null,
+        "risk_coverage": null,
+        "evaluated_profiles": 0,
+        "excluded_profiles": [
+          {
+            "profile_key": "agent-memory",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "efficient-inference",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "reason": "Every candidate in the evaluation subset must have a reviewed label."
+          }
+        ],
+        "per_profile": [],
+        "calibration_status": "unavailable",
+        "calibration_reason": "No declared event probabilities and independently observed correctness outcomes; score-distribution concentration is not a probability of correctness."
+      },
+      "runtime": {
+        "evaluated_pairs": 59,
+        "abstained_pairs": 0,
+        "elapsed_ms": 29015.116999973543,
+        "latency_p50_ms": 450.0875000085216,
+        "latency_p95_ms": 833.7298999831546,
+        "latency_unit": "one_paper_profile_pair",
+        "input_tokens": 111229,
+        "output_tokens": 9832,
+        "cost_usd": 0.004671618
+      },
+      "rankings": {
+        "agent-memory": [],
+        "efficient-inference": [
+          "2106.09685",
+          "2205.14135",
+          "2309.12307",
+          "2305.14314",
+          "2309.06180",
+          "2405.14831",
+          "2305.18290",
+          "2310.08560",
+          "2005.11401",
+          "2410.10813",
+          "2401.18059",
+          "2302.04761",
+          "2310.11511",
+          "2401.15884",
+          "2304.11406",
+          "2304.03442",
+          "2307.03172",
+          "2210.03629",
+          "2308.03688",
+          "2310.06770"
+        ],
+        "retrieval-personalization": [
+          "2310.11511",
+          "2405.14831",
+          "2304.11406",
+          "2401.18059",
+          "2005.11401",
+          "2401.15884",
+          "2410.10813",
+          "2210.03629",
+          "2307.03172",
+          "2310.08560",
+          "2302.04761",
+          "2304.03442",
+          "2305.18290",
+          "2106.09685",
+          "2305.14314",
+          "2308.03688",
+          "2309.12307",
+          "2310.06770",
+          "2309.06180",
+          "2205.14135"
+        ]
+      },
+      "scores": {
+        "agent-memory": {
+          "2310.08560": 97.2214,
+          "2304.03442": 66.325,
+          "2307.03172": 93.3964,
+          "2310.11511": 41.5786,
+          "2401.15884": 40.2357,
+          "2005.11401": 51.7821,
+          "2305.18290": 17.7429,
+          "2106.09685": 24.1107,
+          "2305.14314": 42.4393,
+          "2309.06180": 39.85,
+          "2302.04761": 26.6714,
+          "2210.03629": 39.9429,
+          "2308.03688": 48.9893,
+          "2310.06770": 29.9857,
+          "2410.10813": 98.2,
+          "2405.14831": 70.3,
+          "2309.12307": 49.8464,
+          "2401.18059": 51.7821,
+          "2304.11406": 45.8357
+        },
+        "efficient-inference": {
+          "2310.08560": 42.6893,
+          "2304.03442": 15.0607,
+          "2307.03172": 11.1607,
+          "2310.11511": 24.7071,
+          "2401.15884": 24.0714,
+          "2005.11401": 31.6786,
+          "2305.18290": 52.4714,
+          "2106.09685": 99.4643,
+          "2305.14314": 97.6464,
+          "2205.14135": 97.9107,
+          "2309.06180": 95.2893,
+          "2302.04761": 25.8179,
+          "2210.03629": 9.5357,
+          "2308.03688": 6.9464,
+          "2310.06770": 5.8679,
+          "2410.10813": 29.0429,
+          "2405.14831": 60.8714,
+          "2309.12307": 97.7107,
+          "2401.18059": 27.7679,
+          "2304.11406": 17.7321
+        },
+        "retrieval-personalization": {
+          "2310.08560": 49.075,
+          "2304.03442": 46.3893,
+          "2307.03172": 51.9964,
+          "2310.11511": 93.1821,
+          "2401.15884": 83.8607,
+          "2005.11401": 84.0,
+          "2305.18290": 39.3857,
+          "2106.09685": 30.6714,
+          "2305.14314": 25.7393,
+          "2205.14135": 7.45,
+          "2309.06180": 10.2321,
+          "2302.04761": 48.8929,
+          "2210.03629": 53.8964,
+          "2308.03688": 22.3179,
+          "2310.06770": 10.2964,
+          "2410.10813": 62.8714,
+          "2405.14831": 90.0929,
+          "2309.12307": 19.7893,
+          "2401.18059": 84.5071,
+          "2304.11406": 88.7214
+        }
+      },
+      "decisions": [
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2310.08560",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.98,
+          "confidence": 0.97,
+          "rank_score": 97.2214,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2304.03442",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.31,
+          "confidence": 0.53,
+          "rank_score": 66.325,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2307.03172",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.95,
+          "confidence": 0.92,
+          "rank_score": 93.3964,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2310.11511",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.82,
+          "confidence": 0.73,
+          "rank_score": 41.5786,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2401.15884",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.8,
+          "confidence": 0.7,
+          "rank_score": 40.2357,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2005.11401",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.99,
+          "confidence": 0.97,
+          "rank_score": 51.7821,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2305.18290",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.36,
+          "confidence": 0.46,
+          "rank_score": 17.7429,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2106.09685",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.47,
+          "confidence": 0.29,
+          "rank_score": 24.1107,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2305.14314",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.75,
+          "confidence": 0.63,
+          "rank_score": 42.4393,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2309.06180",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.62,
+          "confidence": 0.42,
+          "rank_score": 39.85,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2302.04761",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.5,
+          "confidence": 0.26,
+          "rank_score": 26.6714,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2210.03629",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.78,
+          "confidence": 0.67,
+          "rank_score": 39.9429,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2308.03688",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.01,
+          "confidence": 0.96,
+          "rank_score": 48.9893,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2310.06770",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.52,
+          "confidence": 0.28,
+          "rank_score": 29.9857,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2410.10813",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 2.0,
+          "confidence": 1.0,
+          "rank_score": 98.2,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2405.14831",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.4,
+          "confidence": 0.4,
+          "rank_score": 70.3,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2309.12307",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.01,
+          "confidence": 0.98,
+          "rank_score": 49.8464,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2401.18059",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.99,
+          "confidence": 0.95,
+          "rank_score": 51.7821,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2304.11406",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.02,
+          "confidence": 0.93,
+          "rank_score": 45.8357,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2310.08560",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.89,
+          "confidence": 0.82,
+          "rank_score": 42.6893,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2304.03442",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.25,
+          "confidence": 0.63,
+          "rank_score": 15.0607,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2307.03172",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.25,
+          "confidence": 0.63,
+          "rank_score": 11.1607,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2310.11511",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.48,
+          "confidence": 0.29,
+          "rank_score": 24.7071,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2401.15884",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.46,
+          "confidence": 0.31,
+          "rank_score": 24.0714,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2005.11401",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.64,
+          "confidence": 0.45,
+          "rank_score": 31.6786,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2305.18290",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.04,
+          "confidence": 0.87,
+          "rank_score": 52.4714,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2106.09685",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 2.0,
+          "confidence": 1.0,
+          "rank_score": 99.4643,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2305.14314",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.99,
+          "confidence": 0.99,
+          "rank_score": 97.6464,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2205.14135",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.97,
+          "confidence": 0.96,
+          "rank_score": 97.9107,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2309.06180",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.99,
+          "confidence": 0.98,
+          "rank_score": 95.2893,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2302.04761",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.49,
+          "confidence": 0.27,
+          "rank_score": 25.8179,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2210.03629",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.12,
+          "confidence": 0.82,
+          "rank_score": 9.5357,
+          "route": "later",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2308.03688",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.11,
+          "confidence": 0.83,
+          "rank_score": 6.9464,
+          "route": "later",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2310.06770",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.07,
+          "confidence": 0.89,
+          "rank_score": 5.8679,
+          "route": "later",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2410.10813",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.52,
+          "confidence": 0.27,
+          "rank_score": 29.0429,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2405.14831",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.1,
+          "confidence": 0.76,
+          "rank_score": 60.8714,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2309.12307",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.99,
+          "confidence": 0.99,
+          "rank_score": 97.7107,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2401.18059",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.55,
+          "confidence": 0.32,
+          "rank_score": 27.7679,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "efficient-inference",
+          "arxiv_id": "2304.11406",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.33,
+          "confidence": 0.51,
+          "rank_score": 17.7321,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2310.08560",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.01,
+          "confidence": 0.96,
+          "rank_score": 49.075,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2304.03442",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.91,
+          "confidence": 0.85,
+          "rank_score": 46.3893,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2307.03172",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.11,
+          "confidence": 0.83,
+          "rank_score": 51.9964,
+          "route": "skim",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2310.11511",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.95,
+          "confidence": 0.93,
+          "rank_score": 93.1821,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2401.15884",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.77,
+          "confidence": 0.66,
+          "rank_score": 83.8607,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2005.11401",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.74,
+          "confidence": 0.6,
+          "rank_score": 84.0,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2305.18290",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.9,
+          "confidence": 0.85,
+          "rank_score": 39.3857,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2106.09685",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.7,
+          "confidence": 0.55,
+          "rank_score": 30.6714,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2305.14314",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.53,
+          "confidence": 0.3,
+          "rank_score": 25.7393,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2205.14135",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.14,
+          "confidence": 0.79,
+          "rank_score": 7.45,
+          "route": "later",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2309.06180",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.21,
+          "confidence": 0.69,
+          "rank_score": 10.2321,
+          "route": "later",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2302.04761",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.04,
+          "confidence": 0.93,
+          "rank_score": 48.8929,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2210.03629",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.07,
+          "confidence": 0.9,
+          "rank_score": 53.8964,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2308.03688",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.51,
+          "confidence": 0.26,
+          "rank_score": 22.3179,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2310.06770",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.21,
+          "confidence": 0.68,
+          "rank_score": 10.2964,
+          "route": "later",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2410.10813",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.26,
+          "confidence": 0.61,
+          "rank_score": 62.8714,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2405.14831",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.96,
+          "confidence": 0.94,
+          "rank_score": 90.0929,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2309.12307",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 0.45,
+          "confidence": 0.32,
+          "rank_score": 19.7893,
+          "route": "review",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2401.18059",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.82,
+          "confidence": 0.73,
+          "rank_score": 84.5071,
+          "route": "read",
+          "relevance_known": true
+        },
+        {
+          "profile_key": "retrieval-personalization",
+          "arxiv_id": "2304.11406",
+          "model": "typesafe/jev-1.13-20260917",
+          "question_version": "scout-triage-1.0",
+          "relevance": 1.84,
+          "confidence": 0.75,
+          "rank_score": 88.7214,
+          "route": "read",
+          "relevance_known": true
+        }
+      ],
+      "errors": [
+        {
+          "profile_key": "agent-memory",
+          "arxiv_id": "2205.14135",
+          "error_type": "EngineError",
+          "message": "Provider evaluation failed; quality is not evaluated on incomplete candidate sets."
+        }
+      ],
+      "response_validation": {
+        "versions": [
+          "jev-wire-1.1"
+        ],
+        "wire_compatibility_decisions": 10,
+        "rescued_field_counts": {
+          "relevance_score": 8,
+          "evidence_distribution": 2
+        },
+        "provider_values_preserved": true,
+        "assumption": "Observed two-decimal wire grid; interval compatibility is not an official provider precision guarantee.",
+        "events": [
+          {
+            "profile_key": "agent-memory",
+            "arxiv_id": "2005.11401",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 1.0,
+              "feasible_normalized_expectation_interval": [
+                0.99,
+                1.01
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "agent-memory",
+            "arxiv_id": "2309.06180",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 0.61,
+              "feasible_normalized_expectation_interval": [
+                0.605,
+                0.62
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "agent-memory",
+            "arxiv_id": "2304.11406",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 1.03,
+              "feasible_normalized_expectation_interval": [
+                1.02,
+                1.04
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "efficient-inference",
+            "arxiv_id": "2310.08560",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 0.9,
+              "feasible_normalized_expectation_interval": [
+                0.89,
+                0.91
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "efficient-inference",
+            "arxiv_id": "2305.18290",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 1.05,
+              "feasible_normalized_expectation_interval": [
+                1.0400000000000003,
+                1.06
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "efficient-inference",
+            "arxiv_id": "2106.09685",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "evidence_distribution"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 0.9900000000000001
+              },
+              "expectation_from_reported_probabilities": 2.0,
+              "feasible_normalized_expectation_interval": null,
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "efficient-inference",
+            "arxiv_id": "2401.18059",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 0.54,
+              "feasible_normalized_expectation_interval": [
+                0.535,
+                0.55
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "arxiv_id": "2310.08560",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "evidence_distribution"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 0.9900000000000001
+              },
+              "expectation_from_reported_probabilities": 1.01,
+              "feasible_normalized_expectation_interval": null,
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "arxiv_id": "2304.03442",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 0.9,
+              "feasible_normalized_expectation_interval": [
+                0.895,
+                0.91
+              ],
+              "provider_values_preserved": true
+            }
+          },
+          {
+            "profile_key": "retrieval-personalization",
+            "arxiv_id": "2302.04761",
+            "wire_validation": {
+              "mode": "two_decimal_interval_compatibility",
+              "rescued_fields": [
+                "relevance_score"
+              ],
+              "assumed_rounding_step": 0.01,
+              "reported_probability_sums": {
+                "relevance": 1.0,
+                "evidence": 1.0
+              },
+              "expectation_from_reported_probabilities": 1.05,
+              "feasible_normalized_expectation_interval": [
+                1.04,
+                1.055
+              ],
+              "provider_values_preserved": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "No quality claim is possible without reviewed relevance annotations for complete candidate sets.",
+    "Author-reference labels, if imported, are subjective and are not an independent user study.",
+    "The 20-paper starter corpus is small and selected for demonstration; do not generalize its results.",
+    "Abstract-level evidence cannot establish findings that require the full paper.",
+    "No measured user time savings, deployment traffic, or real-user adoption is claimed.",
+    "No calibration metrics are reported without declared event probabilities and observed outcomes; model score confidence is uncalibrated.",
+    "Runtime is a local one-pass observation; lexical per-profile timings and live per-pair timings have different units.",
+    "Group and time holdouts prevent document-family overlap; they do not by themselves validate annotation independence or eliminate corpus-selection bias.",
+    "Jev responses on the observed two-decimal wire grid may require interval-feasibility validation; this is recorded per decision and does not normalize or change provider values."
+  ]
+}
