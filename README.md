@@ -8,6 +8,12 @@ Built with **React · TypeScript · FastAPI · SQLite**, with **Jev structured d
 
 [中文使用说明](docs/USER_GUIDE.zh-CN.md) · [Installation](docs/INSTALLATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation](docs/EVALUATION.md) · [Demo walkthrough](docs/DEMO.md)
 
+**Start with the demo:** follow the Agent memory & reliability question, inspect MemGPT's original abstract, save a note, then export the reading list. The bundled 20-paper workspace works without a model key. [Five-minute walkthrough](docs/DEMO.md).
+
+**Measured:** constrained local Qwen decoding produced **60/60 schema-valid decisions**, compared with **51/60** in the earlier prompt-only diagnostic run. A separate Jev run validated **59/60** decisions. These measure output reliability and execution; recommendation quality remains unmeasured without human relevance labels. [Results and retained failures](docs/RESULTS.md).
+
+**The tradeoff:** source-linked evidence, explicit provider identity and visible unknowns make decisions inspectable. The application never treats a valid response or a provider confidence score as proof that a paper is relevant.
+
 ![Jev Scout desktop workspace with real arXiv papers](docs/screenshots/desktop.png)
 
 ## The workflow
@@ -98,7 +104,7 @@ See [verified results and remaining limits](docs/RESULTS.md), the [intelligence 
 .\.venv\Scripts\python.exe -m jev_scout.evaluation --output artifacts/evaluation/offline.json
 ```
 
-GitHub Actions defines Windows/Linux verification and a Linux container smoke test. Its remote status becomes available only after the repository is pushed and the workflow actually runs.
+[GitHub Actions](https://github.com/RiverHe2000/jev-scout/actions/workflows/ci.yml) runs Windows/Linux verification and a Linux container health/frontend smoke test. The [successful run for `3a68d86`](https://github.com/RiverHe2000/jev-scout/actions/runs/36111106532) verifies those installation paths with offline checks; it does not run paid providers or local GPU models. The Actions page retains results for later revisions.
 
 ## Scope and data
 

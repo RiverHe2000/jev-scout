@@ -68,7 +68,7 @@ The displayed report combines the original Qwen/baseline measurements with the s
 - Human relevance labels, recommendation accuracy, ranking improvements, calibration, and reading-time savings.
 - User adoption and multi-user operation.
 - Provider billing reconciliation, including charges for rejected or failed requests.
-- Linux execution and Docker image execution on the development machine. Docker's engine was unavailable; a CI definition alone is not a passed run.
+- Linux execution and Docker image execution on the Windows development machine. Its Docker engine was unavailable. Separately, the [remote run for `3a68d86`](https://github.com/RiverHe2000/jev-scout/actions/runs/36111106532) passed Windows/Linux offline verification and the Linux container health/frontend smoke test. That run does not establish Linux GPU inference or live-provider quality.
 
 The evaluation template deliberately leaves labels empty. Quality metrics stay unavailable until a valid annotated dataset is supplied. Successful schema validation establishes the shape of a response, not its semantic correctness.
 
