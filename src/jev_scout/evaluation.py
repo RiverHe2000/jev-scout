@@ -331,6 +331,7 @@ def load_annotations(path: Path, papers: Sequence[dict], profiles: Sequence[dict
     if not isinstance(source, str) or source not in {
         "unreviewed",
         "author_reference",
+        "ai_reference",
         "independent_human",
         "synthetic_contract",
     }:
@@ -386,6 +387,8 @@ def load_annotations(path: Path, papers: Sequence[dict], profiles: Sequence[dict
         raise ValueError("Nonempty labels require a named annotator and reviewed label_source")
     if source == "independent_human" and provenance.get("independent_review") is not True:
         raise ValueError("Independent labels require an explicit independent_review declaration")
+    if source == "ai_reference" and provenance.get("independent_review") is not False:
+        raise ValueError("AI references must explicitly declare independent_review false")
     return {"labels": labels, "provenance": provenance, "labelled_pairs": labelled}
 
 
@@ -635,6 +638,7 @@ async def benchmark(
         "limitations": [
             "No quality claim is possible without reviewed relevance annotations for complete candidate sets.",
             "Author-reference labels, if imported, are subjective and are not an independent user study.",
+            "AI-reference grades measure agreement with an assistant judgement, not independent human relevance or user utility.",
             "The 20-paper starter corpus is small and selected for demonstration; do not generalize its results.",
             "Abstract-level evidence cannot establish findings that require the full paper.",
             "No measured user time savings, deployment traffic, or real-user adoption is claimed.",

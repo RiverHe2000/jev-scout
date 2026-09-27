@@ -10,6 +10,8 @@ arXiv makes descriptive metadata, including title, abstract, authors, identifier
 
 `annotations.template.json` contains **60 unlabelled profile–paper pairs**. Every grade is deliberately `null`. Copy the template before annotation and follow [the evaluation protocol](../docs/EVALUATION.md). No author-reference judgements or independent human labels are bundled.
 
+`annotations.ai-reference-v1.json` is a separate **AI-reference** file with 60 assistant judgements, rationales and predeclared alternative grades. It was frozen before inspecting saved rankings, but after the original inference runs. It is not a human gold standard. The [retrospective review](../artifacts/evaluation/phase-c/reference-review.md) retains incomplete model predictions and compares common complete profiles separately.
+
 The maintenance script `refresh_public_collection.py` fills missing IDs only and preserves existing frozen records. Review source versions and annotation compatibility explicitly before replacing a snapshot. It does not silently change an existing benchmark corpus.
 
 ## Source index

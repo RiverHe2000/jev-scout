@@ -1,6 +1,22 @@
 # Evaluation that distinguishes measurement from evidence
 
-The benchmark runs three retrieval baselines over 20 attributed arXiv abstracts and three starter research profiles. The included measurements contain an **actual local Qwen3-4B inference run with 60/60 structurally validated profile–paper decisions**, plus a separate [actual Jev run through OpenRouter](../artifacts/evaluation/jev-report.json). Rankings, runtime, and token usage are measured. Relevance-quality scores remain unavailable because the collection has not been annotated. Each provider is named separately; these results do not establish user time savings, adoption, or an independent study.
+The benchmark runs three retrieval baselines over 20 attributed arXiv abstracts and three starter research profiles. The included measurements contain an **actual local Qwen3-4B inference run with 60/60 structurally validated profile–paper decisions**, plus a separate [actual Jev run through OpenRouter](../artifacts/evaluation/jev-report.json). Rankings, runtime, and token usage are measured. The original reports have no reference labels and retain unavailable quality fields. A later, separate [AI-reference review](../artifacts/evaluation/phase-c/reference-review.md) measures agreement with frozen assistant judgements. Human relevance quality, user time savings, adoption and independent study claims remain unmeasured.
+
+## Retrospective AI-reference review
+
+The [protocol and 60 reference judgements](phase-c/RELEVANCE_PROTOCOL.md) were frozen in commit `b7dadfe` before the assistant inspected saved rankings. The reference was created after the historical model runs; it is an exploratory retrospective analysis. All three profile definitions, paper versions, rationales and plausible alternative grades are retained in [the reference file](../data/annotations.ai-reference-v1.json). No provider was called again, and no prompt, ranking or failed request was changed.
+
+From a source checkout, reproduce the separate report without a GPU or API key:
+
+```powershell
+python -m jev_scout.reference_review --output artifacts/evaluation/phase-c/reference-review.json
+```
+
+The review validates corpus/protocol identity, lexical reproduction, full rankings, successful decision records and retained failures before rescoring. Historical live request bodies did not retain a profile digest; matching lexical results and committed profile history establish consistency, not proof of the exact historical prompts. Each method keeps its original runtime and execution date. The common-profile comparison excludes `agent-memory` because one Jev prediction failed, while per-profile tables preserve the other methods' results there.
+
+On the two common complete profiles, all five methods have nDCG@5 = 1.000 and Precision@5 = 1.000. The collection has a ceiling effect and does not show a model advantage. Across each method's available profiles, BM25 = 1.000, TF-IDF = 0.971, keyword coverage = 0.914 and Qwen = 0.858; Jev = 1.000 covers only two profiles and is **not directly comparable** to those three-profile averages. On `agent-memory`, Qwen nDCG@5 is 0.573 versus BM25's 1.000 under this AI reference. This identifies cases for later human review, not a general model ranking.
+
+Predeclared one-label-at-a-time sensitivity gives common-profile nDCG@5 ranges of 0.929–1.000 for Qwen and 1.000–1.000 for the other methods. These are not confidence intervals and do not cover simultaneous label changes. The original application report remains unchanged so retrospective AI-reference results cannot be mistaken for human evaluation.
 
 ## Recorded local-model run
 
@@ -61,7 +77,7 @@ The command refuses to overwrite existing labels. Each row has a stable profile 
 
 Annotate using the question and available abstract *before inspecting model rankings*. Use `0` for irrelevant, `1` for partly useful, and `2` for directly useful. Keep an uncertain judgement `null`; a missing label is never treated as a negative. Record disagreements or full-paper information gaps in notes.
 
-Set `provenance.label_source` to `author_reference` if the project author supplies judgements, record the annotator, and keep `independent_review` false. Only use `independent_human` with an actual independent annotator and an explicit true declaration. That declaration is recorded provenance, not independently verified by the software. Synthetic contract data is rejected by the real-paper label loader.
+Set `provenance.label_source` to `author_reference` if the project author supplies judgements, record the annotator, and keep `independent_review` false. Use `ai_reference` for assistant judgements with `independent_review` explicitly false. Only use `independent_human` with an actual independent annotator and an explicit true declaration. That declaration is recorded provenance, not independently verified by the software. Synthetic contract data is rejected by the real-paper label loader.
 
 ```console
 python -m jev_scout.evaluation --labels artifacts/evaluation/my-labels.json --output artifacts/evaluation/labelled-report.json

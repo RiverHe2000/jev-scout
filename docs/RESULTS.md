@@ -63,6 +63,16 @@ The actual workspace retry completed **all 21 papers**, reusing 20 successful re
 
 The displayed report combines the original Qwen/baseline measurements with the separate Jev run only after checking that the frozen dataset and protocol match. Each method retains its source report and timestamp. These independent runs are not a randomized or simultaneous speed comparison. The original reports remain available alongside the combined display file.
 
+## September 27: exploratory AI-reference review
+
+The project owner requested independent assistant testing because human participants were unavailable. An assistant graded all 60 abstract/profile pairs from the frozen source abstracts, before reading the stored rankings. [Commit `b7dadfe`](https://github.com/RiverHe2000/jev-scout/commit/b7dadfe) preserves the protocol and labels before scoring. This is AI-reference agreement, not an independent human study.
+
+The [separate review](../artifacts/evaluation/phase-c/reference-review.md) retains the original model requests, failure, timestamps and cost estimates. All five methods achieve nDCG@5 = 1.000 on the two common complete profiles; the small curated corpus cannot distinguish their ranking quality there. The failed Jev request excludes `agent-memory` from that common comparison. Other methods' results on that profile remain visible: BM25 1.000, TF-IDF 0.913, keyword coverage 0.743, Qwen 0.573. No method or label was tuned from this result, and no extra provider charges were incurred.
+
+Runtime remains historical: Qwen used 54,299 input / 2,324 output tokens and 261.989 seconds; Jev's 59 successful decisions recorded 111,229 / 9,832 tokens, 29.015 seconds total elapsed and $0.004671618 estimated successful input fees. Neither number includes all ownership costs, and the separate runs do not establish a controlled speed advantage. [Evaluation details and sensitivity](EVALUATION.md#retrospective-ai-reference-review).
+
+This addition passed **216 backend tests**, Python lint and formatting checks. A second assistant independently reviewed the analysis and recomputed it in memory: all fields except the analysis timestamp matched the saved JSON, including its three canonical input hashes. This is an engineering review, not independent annotation of paper relevance. No frontend behavior changed.
+
 ## What remains unmeasured
 
 - Human relevance labels, recommendation accuracy, ranking improvements, calibration, and reading-time savings.
@@ -70,7 +80,7 @@ The displayed report combines the original Qwen/baseline measurements with the s
 - Provider billing reconciliation, including charges for rejected or failed requests.
 - Linux execution and Docker image execution on the Windows development machine. Its Docker engine was unavailable. Separately, the [remote run for `3a68d86`](https://github.com/RiverHe2000/jev-scout/actions/runs/36111106532) passed Windows/Linux offline verification and the Linux container health/frontend smoke test. That run does not establish Linux GPU inference or live-provider quality.
 
-The evaluation template deliberately leaves labels empty. Quality metrics stay unavailable until a valid annotated dataset is supplied. Successful schema validation establishes the shape of a response, not its semantic correctness.
+The human evaluation template deliberately leaves labels empty. The original reports and application retain unavailable quality fields. The separate AI-reference report measures only agreement with its declared assistant judgements. Successful schema validation establishes the shape of a response, not its semantic correctness.
 
 ## Reproduce
 

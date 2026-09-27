@@ -12,6 +12,8 @@ Built with **React · TypeScript · FastAPI · SQLite**, with **Jev structured d
 
 **Measured:** constrained local Qwen decoding produced **60/60 schema-valid decisions**, compared with **51/60** in the earlier prompt-only diagnostic run. A separate Jev run validated **59/60** decisions. These measure output reliability and execution; recommendation quality remains unmeasured without human relevance labels. [Results and retained failures](docs/RESULTS.md).
 
+**Exploratory ranking check:** a separate [frozen AI-reference review](artifacts/evaluation/phase-c/reference-review.md) now scores all 60 paper–profile pairs. On the two profiles completed by every method, all five methods reach nDCG@5 = 1.000; this small collection does not demonstrate a model ranking advantage. The failed Jev profile remains excluded and visible. These are assistant judgements, not human relevance labels or user research.
+
 **The tradeoff:** source-linked evidence, explicit provider identity and visible unknowns make decisions inspectable. The application never treats a valid response or a provider confidence score as proof that a paper is relevant.
 
 ![Jev Scout desktop workspace with real arXiv papers](docs/screenshots/desktop.png)
